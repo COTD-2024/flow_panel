@@ -5,18 +5,6 @@ datapoint: "last"
 cells:
   "localhost:9100":
     dataRef: "up"
-    label:
-      dataRef: "up"
-      text: "${instance}"
-      decimalPoints: 0
-      units: "none"
-      separator: "cr"
-    labelColor:
-      dataRef: "up"
-      thresholds:
-        - {color: "green", level: 1}
-        - {color: "red",   level: 0}
-      gradientMode: "none"
     fillColor:
       dataRef: "up"
       thresholds:
@@ -24,11 +12,5 @@ cells:
         - {color: "red",   level: 0}
       gradientMode: "none"
       elementFilter:
-        - {name: "path", position: ".*"}
         - {name: "rect", position: ".*"}
-    strokeColor:
-      dataRef: "up"
-      thresholds:
-        - {color: "green", level: 1}
-        - {color: "red",   level: 0}
-      gradientMode: "none"
+
