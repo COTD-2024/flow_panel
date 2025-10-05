@@ -1,9 +1,13 @@
+cellIdPreamble: ""
+gradientMode: "hue"
+datapoint: "last"
+
 cells:
-  node-exporter:
-    dataRef: "up"       # Serie de Prometheus
+  "localhost:9100":
+    dataRef: "up"
     label:
-      dataRef: "up"     # Referencia para la celda
-      text: "${instance}" # Muestra la etiqueta "instance"
+      dataRef: "up"
+      text: "${instance}"
       decimalPoints: 0
       units: "none"
       separator: "cr"
@@ -11,15 +15,20 @@ cells:
       dataRef: "up"
       thresholds:
         - {color: "green", level: 1}
-        - {color: "red", level: 0}
+        - {color: "red",   level: 0}
       gradientMode: "none"
     fillColor:
       dataRef: "up"
       thresholds:
         - {color: "green", level: 1}
-        - {color: "red", level: 0}
+        - {color: "red",   level: 0}
       gradientMode: "none"
-    link:
-      url: "http://localhost:3000/targets"
-      params: "time"
-      sameTab: true
+      elementFilter:
+        - {name: "path", position: ".*"}
+        - {name: "rect", position: ".*"}
+    strokeColor:
+      dataRef: "up"
+      thresholds:
+        - {color: "green", level: 1}
+        - {color: "red",   level: 0}
+      gradientMode: "none"
