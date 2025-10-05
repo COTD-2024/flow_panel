@@ -5,15 +5,13 @@ datapoint: "last"
 cells:
   "localhost:9100":
     dataRef: "up"
-    
-    # Texto dentro del <text>
+
     label:
       dataRef: "up"
       text: "${instance}"
       decimalPoints: 0
       units: "none"
       separator: "cr"
-      # Color del texto según el valor
       labelColor:
         dataRef: "up"
         thresholds:
@@ -21,9 +19,10 @@ cells:
           - {color: "red",   level: 0}
         gradientMode: "none"
         elementFilter:
-          - {name: "text", position: ".*"}  # Aplica a tu <text> dentro del switch
+          - {name: "text", position: ".*"}
+        filterLabels:
+          instance: "localhost:9100"   # Filtra solo esta instancia
 
-    # Color de relleno de path/rect
     fillColor:
       dataRef: "up"
       thresholds:
@@ -33,8 +32,9 @@ cells:
       elementFilter:
         - {name: "path", position: ".*"}
         - {name: "rect", position: ".*"}
+      filterLabels:
+        instance: "localhost:9100"
 
-    # Color del borde de path/rect
     strokeColor:
       dataRef: "up"
       thresholds:
@@ -44,3 +44,5 @@ cells:
       elementFilter:
         - {name: "path", position: ".*"}
         - {name: "rect", position: ".*"}
+      filterLabels:
+        instance: "localhost:9100"
