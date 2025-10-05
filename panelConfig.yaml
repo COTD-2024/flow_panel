@@ -1,0 +1,10 @@
+cellIdPreamble: 
+gradientMode: "hue"
+
+cells:
+  "*":   # El asterisco indica “todas las celdas”
+    dataRef: "up{description=\"$CELLID\"}"
+    labelColor:
+      thresholds:
+        - {color: "green", level: 1}
+        - {color: "red", level: 0}
