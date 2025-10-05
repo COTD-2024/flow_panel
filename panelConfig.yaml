@@ -1,10 +1,25 @@
-cellIdPreamble: 
-gradientMode: "hue"
-
 cells:
-  "localhost:9100":   # El asterisco indica “todas las celdas”
-    dataRef: 'up'
+  node-exporter:
+    dataRef: "up"       # Serie de Prometheus
+    label:
+      dataRef: "up"     # Referencia para la celda
+      text: "${instance}" # Muestra la etiqueta "instance"
+      decimalPoints: 0
+      units: "none"
+      separator: "cr"
     labelColor:
+      dataRef: "up"
       thresholds:
         - {color: "green", level: 1}
         - {color: "red", level: 0}
+      gradientMode: "none"
+    fillColor:
+      dataRef: "up"
+      thresholds:
+        - {color: "green", level: 1}
+        - {color: "red", level: 0}
+      gradientMode: "none"
+    link:
+      url: "http://localhost:3000/targets"
+      params: "time"
+      sameTab: true
