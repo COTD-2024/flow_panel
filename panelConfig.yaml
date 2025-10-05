@@ -3,7 +3,7 @@ gradientMode: "hue"
 
 cells:
   "*":   # El asterisco indica “todas las celdas”
-    dataRef: "up{description=\"$CELLID\"}"
+    dataRef: 'up{description=~"$CELLID.*"}'
     labelColor:
       thresholds:
         - {color: "green", level: 1}
