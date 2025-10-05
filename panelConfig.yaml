@@ -2,8 +2,8 @@ cellIdPreamble:
 gradientMode: "hue"
 
 cells:
-  "*":   # El asterisco indica “todas las celdas”
-    dataRef: 'up{instance=~"$CELLID.*"}'
+  "localhost:9100":   # El asterisco indica “todas las celdas”
+    dataRef: 'up'
     labelColor:
       thresholds:
         - {color: "green", level: 1}
