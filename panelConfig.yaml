@@ -5,20 +5,25 @@ datapoint: "last"
 cells:
   "localhost:9100":
     dataRef: "up"
+    
+    # Texto dentro del <text>
     label:
       dataRef: "up"
       text: "${instance}"
       decimalPoints: 0
       units: "none"
       separator: "cr"
-      # Opcional: colores del texto si quieres que cambie
+      # Color del texto según el valor
       labelColor:
         dataRef: "up"
         thresholds:
           - {color: "green", level: 1}
           - {color: "red",   level: 0}
         gradientMode: "none"
+        elementFilter:
+          - {name: "text", position: ".*"}  # Aplica a tu <text> dentro del switch
 
+    # Color de relleno de path/rect
     fillColor:
       dataRef: "up"
       thresholds:
@@ -26,9 +31,10 @@ cells:
         - {color: "red",   level: 0}
       gradientMode: "none"
       elementFilter:
-        - {name: "rect", position: ".*"}
         - {name: "path", position: ".*"}
+        - {name: "rect", position: ".*"}
 
+    # Color del borde de path/rect
     strokeColor:
       dataRef: "up"
       thresholds:
@@ -36,6 +42,5 @@ cells:
         - {color: "red",   level: 0}
       gradientMode: "none"
       elementFilter:
-        - {name: "rect", position: ".*"}
         - {name: "path", position: ".*"}
-
+        - {name: "rect", position: ".*"}
