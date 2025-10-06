@@ -1,0 +1,18 @@
+---
+cellIdPreamble: ""
+gradientMode: "none"
+datapoint: "last"
+
+cells:
+  localhost_9100:
+    dataRef: "localhost:9100"
+    fillColor:
+      dataRef: "localhost:9100"
+      thresholds:
+        - { color: "red",   level: 0 }
+        - { color: "green",   level: 1 } 
+      gradientMode: "none"
+      elementFilter:
+        - { name: "path", position: ".*" }  # aplicará a todos los path dentro del g
+    label:
+      separator: "replace"
