@@ -4,10 +4,10 @@ gradientMode: "none"
 datapoint: "last"
 
 cells:
-  localhost_9100:
-    dataRef: "localhost:9100"
+  node_exporter:
+    dataRef: "node_exporter"
     fillColor:
-      dataRef: "localhost:9100"
+      dataRef: "node_exporter"
       thresholds:
         - { color: "red",   level: 0 }
         - { color: "green",   level: 1 } 
