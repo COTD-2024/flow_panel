@@ -5,7 +5,7 @@ gradientMode: "hue"
 
 cells:
   servidor_estado:
-    dataRef: "up"
+    dataRef: "go_memstats_heap_objects"
     label:
       separator: "replace"
       units: ""
