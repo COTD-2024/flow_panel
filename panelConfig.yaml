@@ -26,7 +26,7 @@ anchorLinks:
 
 tagConfig:
   legend: ["Queue Technology:", "rabbitMQ", "kafka", "|", "Flow Attribs:", "inflow", "depth", "latency", "active", "|"]
-  color: "yellow"
+  color: "red"
   highlightRgbFactor: 5.0
   lowlightAlphaFactor: 0.3
 
