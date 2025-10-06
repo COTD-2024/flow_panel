@@ -9,9 +9,8 @@ cells:
     fillColor:
       dataRef: "up_localhost_9100"
       thresholds:
-        # El orden importa: primero los niveles más bajos, luego los más altos
-        - { color: "red",   level: 1 }      # <0.5 será rojo
-        - { color: "green", level: 0 }    # ≥0.5 será verde
+        - { color: "green", level: 0.5 }
+        - { color: "red",   level: 0 } 
       gradientMode: "none"
       elementFilter:
         - { name: "rect", position: ".*" }
