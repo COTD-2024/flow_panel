@@ -1,9 +1,9 @@
 ---
 cells:
   "{{instance}}":
-    dataRef: "up_{{instance_safe}}"
+    dataRef: "{{instance}}"
     fillColor:
-      dataRef: "up_{{instance_safe}}"
+      dataRef: "{{instance}}"
       thresholds:
         - { color: "green", level: 1 }
         - { color: "red",   level: 0 }
