@@ -1,0 +1,15 @@
+---
+cells:
+  "{{instance}}":
+    dataRef: "up_{{instance_safe}}"
+    fillColor:
+      dataRef: "up_{{instance_safe}}"
+      thresholds:
+        - { color: "green", level: 1 }
+        - { color: "red",   level: 0 }
+      gradientMode: "none"
+      elementFilter:
+        - { name: "rect", position: ".*" }
+        - { name: "path", position: ".*" }
+    label:
+      separator: "replace"
