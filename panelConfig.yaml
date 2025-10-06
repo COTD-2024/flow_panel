@@ -1,14 +1,15 @@
 ---
 
 cellIdPreamble: "cell-"
+gradientMode: "hue"
 
 cells:
-  user_throttle_inflow:
+  servidor_estado:
     dataRef: "up"
     label:
       separator: "replace"
-      units: "ops"
+      units: ""
     labelColor:
       thresholds:
-        - {color: "green", level: 1}
-        - {color: "red", level: 0}
+        - { color: "red", level: 0 }     # Si la métrica vale 0 → rojo
+        - { color: "green", level: 1 }   # Si la métrica vale 1 → verde
