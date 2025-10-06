@@ -10,6 +10,7 @@ cells:
       dataRef: "up_localhost_9100"
       thresholds:
         - { color: "green", level: 1 } 
+        - { color: "red",   level: 0 }
       gradientMode: "none"
       elementFilter:
         - { name: "rect", position: ".*" }
