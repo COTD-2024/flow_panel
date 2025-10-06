@@ -8,8 +8,8 @@ cells:
     fillColor:
       dataRef: "up_localhost_9100"
       thresholds:
-        - { color: "red", level: 0 }     # <0.5 rojo
-        - { color: "green", level: 0.5 } # >=0.5 verde
+        - { color: "red",   level: 0 }
+        - { color: "green",   level: 1 } 
       gradientMode: "none"
       elementFilter:
         - { name: "path", position: ".*" }  # aplicará a todos los path dentro del g
