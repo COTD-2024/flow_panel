@@ -1,15 +1,20 @@
 ---
-
 cellIdPreamble: "cell-"
-gradientMode: "hue"
+gradientMode: "none"
+datapoint: "last"
 
 cells:
-  servidor_estado:
-    dataRef: "go_memstats_heap_objects"
+  localhost_9100:
+    dataRef: "up_localhost_9100"
+    fillColor:
+      dataRef: "up_localhost_9100"
+      thresholds:
+        - { color: "green", level: 1 }
+        - { color: "red",   level: 0 }
+      gradientMode: "none"
+      elementFilter:
+        - { name: "rect", position: ".*" }
+        - { name: "path", position: ".*" }
     label:
       separator: "replace"
-      units: ""
-    labelColor:
-      thresholds:
-        - { color: "red", level: 0 }     # Si la métrica vale 0 → rojo
-        - { color: "green", level: 1 }   # Si la métrica vale 1 → verde
+
