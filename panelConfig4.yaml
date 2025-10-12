@@ -5,17 +5,7 @@ datapoint: "last"
 cells:
   node_exporter:
     dataRef: "node_exporter"
-
-    fillColor:
-      dataRef: "node_exporter"
-      thresholds:
-        - { color: "none", level: 1 }       # activo → conserva color original
-        - { color: "#b5b5b5", level: 0 }    # caído → gris
-      gradientMode: "none"
-      elementFilter:
-        - { name: "path", position: "2", filter: 'fill!="#none"' }  # excluye fill="none"
-        - { name: "path", position: "2", filter: 'fill!="#fff"' }   # ignora los blancos
-
+    
     strokeColor:
       dataRef: "node_exporter"
       thresholds:
