@@ -13,8 +13,8 @@ cells:
         - { color: "#b5b5b5", level: 0 }    # caído → gris
       gradientMode: "none"
       elementFilter:
-        - { name: "path", position: ".*", filter: 'fill!="#none"' }  # excluye fill="none"
-        - { name: "path", position: ".*", filter: 'fill!="#fff"' }   # ignora los blancos
+        - { name: "path", position: "2", filter: 'fill!="#none"' }  # excluye fill="none"
+        - { name: "path", position: "2", filter: 'fill!="#fff"' }   # ignora los blancos
 
     strokeColor:
       dataRef: "node_exporter"
@@ -23,7 +23,7 @@ cells:
         - { color: "red", level: 0 }        # borde rojo si caído
       gradientMode: "none"
       elementFilter:
-        - { name: "path", position: ".*", filter: 'stroke="#b09500"' }
+        - { name: "path", position: "2", filter: 'stroke="#b09500"' }
 
     label:
       separator: "replace"
