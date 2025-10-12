@@ -9,10 +9,13 @@ cells:
     fillColor:
       dataRef: "node_exporter"
       thresholds:
-        - { color: "red",   level: 0 }
-        - { color: "green",   level: 1 } 
-      gradientMode: "none"
-      elementFilter:
-        - { name: "path", position: ".*" }  # aplicará a todos los path dentro del g
-    label:
-      separator: "replace"
+        - { color: "none", level: 1 }  
+        - { color: "#b5b5b5", level: 0 }   # gris cuando está caído
+    strokeColor:
+      dataRef: "node_exporter"
+      thresholds:
+        - { color: "green", level: 1 }
+        - { color: "red", level: 0 }
+    gradientMode: "none"
+    elementFilter:
+      - { name: "path", position: ".*", filter: 'fill="#e3c800"' }
