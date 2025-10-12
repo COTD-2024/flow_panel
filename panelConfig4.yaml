@@ -3,17 +3,17 @@ cellIdPreamble: ""
 datapoint: "last"
 
 cells:
-  node_exporter:
-    dataRef: "node_exporter"
+  SW-PEXT-SF1345-10:
+    dataRef: "RT-VOIP-SF1345-01-172.29.198.10"
     
     strokeColor:
-      dataRef: "node_exporter"
+      dataRef: "RT-VOIP-SF1345-01-172.29.198.10"
       thresholds:
         - { color: "green", level: 1 }      # borde verde si activo
         - { color: "red", level: 0 }        # borde rojo si caído
       gradientMode: "none"
       elementFilter:
-        - { name: "path", position: "2", filter: 'stroke="#b09500"' }
+        - { name: "path"}
 
     label:
       separator: "replace"
