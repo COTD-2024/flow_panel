@@ -1,21 +1,28 @@
 ---
 cellIdPreamble: ""
-gradientMode: "none"
 datapoint: "last"
 
 cells:
   node_exporter:
     dataRef: "node_exporter"
+
     fillColor:
       dataRef: "node_exporter"
       thresholds:
-        - { color: "none", level: 1 }  
-        - { color: "#b5b5b5", level: 0 }   # gris cuando está caído
+        - { color: "none", level: 1 }     # activo → conserva color original
+        - { color: "#b5b5b5", level: 0 }  # caído → gris
+      gradientMode: "none"
+      elementFilter:
+        - { name: "path", position: "[2-9]" }  # aplica solo a los paths del dibujo
+
     strokeColor:
       dataRef: "node_exporter"
       thresholds:
-        - { color: "green", level: 1 }
-        - { color: "red", level: 0 }
-    gradientMode: "none"
-    elementFilter:
-      - { name: "path", position: ".*", filter: 'fill="#e3c800"' }
+        - { color: "green", level: 1 }     # borde verde si está activo
+        - { color: "red", level: 0 }       # borde rojo si está caído
+      gradientMode: "none"
+      elementFilter:
+        - { name: "path", position: "[2-9]" }  # idem
+
+    label:
+      separator: "replace"
