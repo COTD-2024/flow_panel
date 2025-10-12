@@ -9,20 +9,20 @@ cells:
     fillColor:
       dataRef: "node_exporter"
       thresholds:
-        - { color: "none", level: 1 }     # activo → conserva color original
-        - { color: "#b5b5b5", level: 0 }  # caído → gris
+        - { color: "none", level: 1 }      # activo → conserva color original
+        - { color: "#b5b5b5", level: 0 }   # caído → relleno gris
       gradientMode: "none"
       elementFilter:
-        - { name: "path", position: "[2-9]" }  # aplica solo a los paths del dibujo
+        - { name: "path", position: "[2-9]", filter: 'fill="#e3c800"' }
 
     strokeColor:
       dataRef: "node_exporter"
       thresholds:
-        - { color: "green", level: 1 }     # borde verde si está activo
-        - { color: "red", level: 0 }       # borde rojo si está caído
+        - { color: "green", level: 1 }     # borde verde si activo
+        - { color: "red", level: 0 }       # borde rojo si caído
       gradientMode: "none"
       elementFilter:
-        - { name: "path", position: "[2-9]" }  # idem
+        - { name: "path", position: "[2-9]", filter: 'stroke="#b09500"' }
 
     label:
       separator: "replace"
