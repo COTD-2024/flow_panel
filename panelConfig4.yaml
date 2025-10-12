@@ -9,20 +9,21 @@ cells:
     fillColor:
       dataRef: "node_exporter"
       thresholds:
-        - { color: "none", level: 1 }      # activo → conserva color original
-        - { color: "#b5b5b5", level: 0 }   # caído → relleno gris
+        - { color: "none", level: 1 }       # activo → conserva color original
+        - { color: "#b5b5b5", level: 0 }    # caído → gris
       gradientMode: "none"
       elementFilter:
-        - { name: "path", position: "[2-9]", filter: 'fill="#e3c800"' }
+        - { name: "path", position: ".*", filter: 'fill!="#none"' }  # excluye fill="none"
+        - { name: "path", position: ".*", filter: 'fill!="#fff"' }   # ignora los blancos
 
     strokeColor:
       dataRef: "node_exporter"
       thresholds:
-        - { color: "green", level: 1 }     # borde verde si activo
-        - { color: "red", level: 0 }       # borde rojo si caído
+        - { color: "green", level: 1 }      # borde verde si activo
+        - { color: "red", level: 0 }        # borde rojo si caído
       gradientMode: "none"
       elementFilter:
-        - { name: "path", position: "[2-9]", filter: 'stroke="#b09500"' }
+        - { name: "path", position: ".*", filter: 'stroke="#b09500"' }
 
     label:
       separator: "replace"
